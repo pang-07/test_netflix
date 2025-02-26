@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.2 on darwin)" generated="2025-02-26T13:56:27.078482" rpa="false" schemaversion="5">
+<suite id="s1" name="Test-Netflix" source="/Users/pang/test-netflix">
+<suite id="s1-s1" name="Login" source="/Users/pang/test-netflix/login.robot">
+<test id="s1-s1-t1" name="Test Login to Netflix" line="11">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-26T13:56:27.214239" level="INFO">Opening browser 'Chrome' to base url 'https://www.netflix.com/th-en/login'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-26T13:56:27.213906" elapsed="2.562410"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-02-26T13:56:29.776957" elapsed="0.369814"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-26T13:56:40.148248" level="INFO">Slept 10 seconds.</msg>
+<arg>10</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-26T13:56:30.147067" elapsed="10.001740"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//input[@name="userLoginId"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-26T13:56:40.149329" elapsed="0.013855"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-26T13:56:40.163594" level="INFO">Typing text 'your_email@example.com' into text field 'xpath=//input[@name="userLoginId"]'.</msg>
+<arg>xpath=//input[@name="userLoginId"]</arg>
+<arg>${EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-26T13:56:40.163372" elapsed="0.319497"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//input[@name="password"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-26T13:56:40.483238" elapsed="0.014340"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-26T13:56:40.497976" level="INFO">Typing text 'your_password' into text field 'xpath=//input[@name="password"]'.</msg>
+<arg>xpath=//input[@name="password"]</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-26T13:56:40.497761" elapsed="0.121948"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//button[@data-uia='sign-in-button']</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-26T13:56:40.620081" elapsed="0.009705"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-02-26T13:56:40.630157" level="INFO">Clicking button 'xpath=//button[@data-uia='sign-in-button']'.</msg>
+<arg>xpath=//button[@data-uia='sign-in-button']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-26T13:56:40.629978" elapsed="0.071624"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-26T13:56:43.702236" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-26T13:56:40.701921" elapsed="3.000478"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-02-26T13:56:44.117115" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-02-26T13:56:43.702573" elapsed="0.414698"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-02-26T13:56:44.117490" elapsed="0.108157"/>
+</kw>
+<status status="PASS" start="2025-02-26T13:56:27.213250" elapsed="17.012630"/>
+</test>
+<status status="PASS" start="2025-02-26T13:56:27.093930" elapsed="17.132533"/>
+</suite>
+<status status="PASS" start="2025-02-26T13:56:27.081310" elapsed="17.145979"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Test-Netflix" id="s1" pass="1" fail="0" skip="0">Test-Netflix</stat>
+<stat name="Login" id="s1-s1" pass="1" fail="0" skip="0">Test-Netflix.Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
